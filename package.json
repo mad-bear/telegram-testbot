@@ -12,7 +12,7 @@
   "dependencies": {
     "express": "^4.15.3",
     "mongodb": "^2.2.29",
-    "telegram-bot-api": "^1.2.0"
+    "telegraf": "^3.8.0",
   },
   "devDependencies": {
     "rewire": "^2.5.2",

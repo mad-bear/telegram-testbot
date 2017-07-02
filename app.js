@@ -1,36 +1,13 @@
-var telegram = require('telegram-bot-api');
+const Telegraf = require('telegraf')
 
-var api = new telegram({
-        token: '376731137:AAEQdPZdUaPhQsL_4X02r5VPmfe2KyGTreE',
-        updates: {
-        	enabled: true
-    }
-});
-
-api.on('message', function(message)
-{
-    // Received text message
-    // if(message.chat.id == 216029435){
-    //   api.sendMessage({
-    //   	chat_id: 1499005107,
-    //   	text: message.text
-    //   });
-    // }
-    // if(message.chat.id == 1499005107){
-      api.sendMessage({
-      	chat_id: message.chat.id,
-      	text: message.text
-      });
-    // }
-    console.log(message);
-});
-
-api.on('inline.result', function(message)
-{
-    // Received chosen inline result
-    console.log(message);
-});
-
+const app = new Telegraf(376731137:AAEQdPZdUaPhQsL_4X02r5VPmfe2KyGTreE)
+app.command('start', ({ from, reply }) => {
+  console.log('start', from)
+  return reply('Welcome!')
+})
+app.hears('hi', (ctx) => ctx.reply('Hey there!'))
+app.on('sticker', (ctx) => ctx.reply('👍'))
+app.startPolling()
 
 //376731137:AAEQdPZdUaPhQsL_4X02r5VPmfe2KyGTreE
 // 216029435
