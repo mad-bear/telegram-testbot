@@ -1,0 +1,21 @@
+{
+  "name": "node-mongo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3",
+    "mongodb": "^2.2.29",
+    "telegram-bot-api": "^1.2.0"
+  },
+  "devDependencies": {
+    "rewire": "^2.5.2",
+    "supertest": "^3.0.0"
+  }
+}
